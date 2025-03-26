@@ -28,7 +28,8 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 z-50 w-full py-4 transition-colors duration-300 ${showWhiteBackground ? "bg-white shadow-md" : "bg-transparent"}`}>
+    <nav className={`fixed top-0 left-0 z-50 w-full py-4 transition-colors duration-300 ${isScrolled ? "bg-white shadow-md" : isMobileMenuOpen ? "bg-white shadow-md" : "bg-transparent"}`}>
+
         <div className="flex items-center justify-between px-6 mx-auto max-w-7xl">
           <button 
             className="md:hidden"
