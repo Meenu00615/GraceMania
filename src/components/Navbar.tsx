@@ -24,11 +24,13 @@ export default function Navbar() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const showWhiteBackground = isScrolled || isMobileMenuOpen;
-
   return (
     <>
-    <nav className={`fixed top-0 left-0 z-50 w-full py-4 transition-colors duration-300 ${isMobileMenuOpen ? "bg-white shadow-md" : "bg-transparent"}`}>
+      <nav className={`fixed top-0 left-0 z-50 w-full transition-colors duration-300 ${
+        isScrolled || isMobileMenuOpen ? "bg-white shadow-md" : "bg-transparent"
+      } ${
+        isMobileMenuOpen ? "py-4" : "py-2 md:py-4" // Reduced padding in mobile when not open
+      }`}>
         <div className="flex items-center justify-between px-6 mx-auto max-w-7xl">
           <button 
             className="md:hidden"
@@ -49,7 +51,7 @@ export default function Navbar() {
             <a href="/bags" className="text-sm tracking-wider uppercase hover:text-gray-600">BAGS</a>
           </div>
 
-          <div className="flex space-x-6">
+          <div className="flex space-x-3">
             <button aria-label="Search">
               <FiSearch className="text-lg hover:text-gray-600" />
             </button>
@@ -77,7 +79,7 @@ export default function Navbar() {
         )}
       </nav>
 
-      <div className="pt-0 md:pt-0"></div>
+      <div className={`pt-${isMobileMenuOpen ? '12' : '0'}`}></div>
     </>
   );
 }
