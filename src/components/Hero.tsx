@@ -67,7 +67,7 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
             className="mb-8 text-2xl font-light tracking-wider text-center sm:mb-12 md:mb-16 sm:text-3xl md:text-4xl"
           >
-            CURATED BY THE HOUSE
+            BAGS CRAFTED BY THE HOUSE
           </motion.h2>
 
           <div className="grid grid-cols-1 gap-8 place-items-center sm:grid-cols-2 sm:gap-8 lg:grid-cols-4 md:gap-12">
