@@ -142,7 +142,7 @@ export default function Hero() {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="px-6 py-2 text-sm text-black transition duration-300 bg-white border border-black sm:px-8 md:px-10 sm:py-3 md:py-4 sm:text-base md:text-lg hover:bg-gray-100"
+                    className="px-6 py-2 text-sm text-black transition duration-300 bg-white border border-white sm:px-8 md:px-10 sm:py-3 md:py-4 sm:text-base md:text-lg hover:bg-gray-100"
                   >
                     SHOP NOW
                   </motion.button>
