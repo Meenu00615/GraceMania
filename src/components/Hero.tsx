@@ -109,7 +109,7 @@ export default function Hero() {
           <div className="flex flex-col space-y-4 md:grid md:grid-cols-2 sm:gap-6 md:space-y-0">
             {[
               { img: "/images/Collection/Needles.jpg", title: "MEN'S COLLECTION" },
-              { img: "/images/Collection/Cara Cara Fall.jpg", title: "WOMEN'S COLLECTION" }
+              { img: "/images/Collection/pexels-andy-lee.jpg", title: "WOMEN'S COLLECTION" }
             ].map((item, index) => (
               <motion.div
                 key={index}
