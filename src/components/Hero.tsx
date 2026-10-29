@@ -13,7 +13,7 @@ export default function Hero() {
     <div>
       <Navbar />
 
-      <section className="bg-[url('/images/pexels-vlada-karpovich_3.jpg')] bg-cover bg-center h-screen flex items-end justify-center text-center px-2 sm:px-10">
+      <section className="bg-[url('/images/pexels-koolshooters-8530410.jpg')] bg-cover bg-center h-screen flex items-end justify-center text-center px-2 sm:px-10">
         <div className="p-3 bg-opacity-90">
 
         <motion.h1
