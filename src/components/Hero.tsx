@@ -67,7 +67,7 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
             className="mb-8 text-2xl font-light tracking-wider text-center sm:mb-12 md:mb-16 sm:text-3xl md:text-4xl"
           >
-            BAGS CRAFTED BY THE HOUSE
+            CRAFTED BY THE HOUSE
           </motion.h2>
 
           <div className="grid grid-cols-1 gap-8 place-items-center sm:grid-cols-2 sm:gap-8 lg:grid-cols-4 md:gap-12">
@@ -108,8 +108,8 @@ export default function Hero() {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col space-y-4 md:grid md:grid-cols-2 sm:gap-6 md:space-y-0">
             {[
-              { img: "/images/Collection/pexels-amirvisuals-7048215.jpg", title: "MEN'S COLLECTION" },
-              { img: "/images/Collection/pexels-andy-lee.jpg", title: "WOMEN'S COLLECTION" }
+              { img: "/images/Collections/pexels-amirvisuals-7048215.jpg", title: "MEN'S COLLECTION" },
+              { img: "/images/Collections/pexels-andy-lee.jpg", title: "WOMEN'S COLLECTION" }
             ].map((item, index) => (
               <motion.div
                 key={index}
