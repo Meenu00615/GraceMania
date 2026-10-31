@@ -51,7 +51,7 @@ const NAV_ITEMS: NavItem[] = [
         heading: "SPORTS & ACTIVEWEAR",
         links: ["Sports T-Shirts", "Track Pants", "Capris", "Sports Tops", "Sports Shorts", "Tights", "Sports Bras", "Shapewear"],
       },
-            {
+      {
         heading: "ACCESSORIES",
         links: ["Belts", "Wallets", "Watches", "Caps", "Sunglasses", "Socks"],
       },
@@ -189,14 +189,17 @@ export default function Navbar() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.2 }}
-              className="absolute left-0 right-0 w-full bg-white shadow-xl hidden md:block border-t border-gray-100"
+              // 👇 CHANGED: Positioned relative to the nav item, width fits content, aligned left
+              className="absolute top-full left-0 bg-white shadow-xl hidden md:block border-t border-gray-100 w-max"
               onMouseEnter={() => setOpenDropdown(openDropdown)}
             >
-              <div className="max-w-7xl mx-auto px-6 py-10">
-                <div className="grid grid-cols-3 gap-12">
+              {/* 👇 CHANGED: Removed max-w-7xl and reduced padding */}
+              <div className="px-8 py-8">
+                {/* 👇 CHANGED: Reduced gap, added min-width so columns don't squish */}
+                <div className="grid grid-cols-3 gap-8">
                   {NAV_ITEMS.find((i) => i.label === openDropdown)?.columns.map(
                     (col) => (
-                      <div key={col.heading}>
+                      <div key={col.heading} className="min-w-[180px]">
                         <h4 className="mb-4 text-sm font-bold tracking-wider uppercase text-gray-900">
                           {col.heading}
                         </h4>
