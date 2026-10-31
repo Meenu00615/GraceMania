@@ -9,8 +9,18 @@ const shareTechMono = Share_Tech_Mono({
   subsets: ["latin"],
 });
 
-// Dropdown data — 4 menus, each with columns
-const NAV_ITEMS = [
+type NavColumn = {
+  heading: string;
+  links: string[];
+};
+
+type NavItem = {
+  label: string;
+  href: string;
+  columns: NavColumn[];
+};
+
+const NAV_ITEMS: NavItem[] = [
   {
     label: "In New",
     href: "/new",
@@ -84,8 +94,8 @@ const NAV_ITEMS = [
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState(null);
-  const [mobileDropdown, setMobileDropdown] = useState(null);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [mobileDropdown, setMobileDropdown] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 100);
@@ -109,7 +119,6 @@ export default function Navbar() {
         onMouseLeave={() => setOpenDropdown(null)}
       >
         <div className="flex items-center justify-between px-6 mx-auto max-w-7xl">
-          {/* Mobile hamburger */}
           <button
             className="md:hidden"
             onClick={toggleMobileMenu}
@@ -118,7 +127,6 @@ export default function Navbar() {
             {isMobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
           </button>
 
-          {/* Logo */}
           <div
             className={`text-2xl md:text-3xl font-bold ${shareTechMono.className} ${
               isMobileMenuOpen ? "ml-4" : ""
@@ -127,7 +135,6 @@ export default function Navbar() {
             <a href="/">GRACE MANIA</a>
           </div>
 
-          {/* Desktop links with dropdown */}
           <div className="hidden md:flex space-x-8">
             {NAV_ITEMS.map((item) => (
               <div
@@ -140,7 +147,6 @@ export default function Navbar() {
                   className="relative block py-2 text-sm tracking-wider uppercase hover:text-gray-600"
                 >
                   {item.label}
-                  {/* Yellow indicator bar */}
                   <AnimatePresence>
                     {openDropdown === item.label && (
                       <motion.span
@@ -159,7 +165,6 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Icons */}
           <div className="flex space-x-3">
             <button aria-label="Search">
               <FiSearch className="text-lg hover:text-gray-600" />
@@ -176,7 +181,6 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Desktop mega dropdown */}
         <AnimatePresence>
           {openDropdown && (
             <motion.div
@@ -217,7 +221,6 @@ export default function Navbar() {
           )}
         </AnimatePresence>
 
-        {/* Mobile menu */}
         {isMobileMenuOpen && (
           <div className="bg-white shadow-lg md:hidden max-h-[80vh] overflow-y-auto">
             <div className="flex flex-col px-6 py-4 space-y-2">
@@ -269,8 +272,6 @@ export default function Navbar() {
           </div>
         )}
       </nav>
-
-      <div className={`pt-${isMobileMenuOpen ? "12" : "0"}`}></div>
     </>
   );
 }
