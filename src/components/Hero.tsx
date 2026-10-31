@@ -13,7 +13,7 @@ export default function Hero() {
     <div>
       <Navbar />
 
-      <section className="bg-[url('/images/pexels-vlada-karpovich_3.jpg')] bg-cover bg-center h-screen flex items-end justify-center text-center px-2 sm:px-10">
+      <section className="bg-[url('/images/pexels-alscre-1701164.jpg')] bg-cover bg-center h-screen flex items-end justify-center text-center px-2 sm:px-10">
         <div className="p-3 bg-opacity-90">
 
         <motion.h1
@@ -72,10 +72,10 @@ export default function Hero() {
 
           <div className="grid grid-cols-1 gap-8 place-items-center sm:grid-cols-2 sm:gap-8 lg:grid-cols-4 md:gap-12">
             {[
-              { img: "/images/Section3/model.jpg", title: "Women's Small Leathergoods" },
-              { img: "/images/Section3/Gucci vintage.jpg", title: "Women's Shoes" },
-              { img: "/images/Section3/Gucci bag.jpg", title: "Gucci" },
-              { img: "/images/Section3/RenzoCosta.jpg", title: "Renzo Costa Bag" }
+              { img: "/images/Section3/pexels-hoang-luan-2163400562-39352316.jpg", title: "Women's Small Leathergoods" },
+              { img: "/images/Section3/pexels-sara-kazemi-2148049458-31090144.jpg", title: "Women's Shoes" },
+              { img: "/images/Section3/pexels-igor-kirillov-9994091-6131203.jpg", title: "Gucci" },
+              { img: "/images/Section3/pexels-1135897-34926020.jpg", title: "Renzo Costa Bag" }
             ].map((item, index) => (
               <motion.div
                 key={index}
