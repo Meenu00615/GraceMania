@@ -13,6 +13,7 @@ const images = [
   "/images/pexels-alscre-1701164.jpg",
   "/images/pexels-jason-1648968-3159734.jpg",
   "/images/pexels-chipi1189-36059954.jpg",
+  "/images/pexels-hoang-b-u-2062876836-34800133.jpg"
 ];
 
 export default function Hero() {
@@ -103,10 +104,10 @@ export default function Hero() {
 
           <div className="grid grid-cols-1 gap-8 place-items-center sm:grid-cols-2 sm:gap-8 lg:grid-cols-4 md:gap-12">
             {[
-              { img: "/images/Section3/pexels-hoang-luan-2163400562-39352316.jpg", title: "Women's Small Leathergoods" },
-              { img: "/images/Section3/pexels-sara-kazemi-2148049458-31090144.jpg", title: "Women's Shoes" },
-              { img: "/images/Section3/pexels-igor-kirillov-9994091-6131203.jpg", title: "Gucci" },
-              { img: "/images/Section3/pexels-1135897-34926020.jpg", title: "Renzo Costa Bag" },
+              { img: "/images/pexels-hoang-luan-2163400562-39352316.jpg", title: "Women's Small Leathergoods" },
+              { img: "/images/pexels-sara-kazemi-2148049458-31090144.jpg", title: "Women's Shoes" },
+              { img: "/images/pexels-igor-kirillov-9994091-6131203.jpg", title: "Gucci" },
+              { img: "/images/pexels-1135897-34926020.jpg", title: "Renzo Costa Bag" },
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -138,7 +139,7 @@ export default function Hero() {
           <div className="flex flex-col space-y-4 md:grid md:grid-cols-2 sm:gap-6 md:space-y-0">
             {[
               { img: "/images/Collections/pexels-amirvisuals-7048215.jpg", title: "MEN'S COLLECTION" },
-              { img: "/images/Collections/pexels-andy-lee.jpg", title: "WOMEN'S COLLECTION" },
+              { img: "/images/Collections/xusenru-girl-1382947_1920.jpg", title: "WOMEN'S COLLECTION" },
             ].map((item, index) => (
               <motion.div
                 key={index}
