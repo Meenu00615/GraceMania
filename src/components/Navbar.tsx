@@ -35,7 +35,7 @@ const NAV_ITEMS: NavItem[] = [
       },
       {
         heading: "COLLECTIONS",
-        links: ["Spring/Summer", "Limited Edition", "Capsule", "Essentials"],
+        links: ["Winter", "Spring/Summer", "Limited Edition", "Capsule", "Essentials"],
       },
     ],
   },
@@ -50,6 +50,10 @@ const NAV_ITEMS: NavItem[] = [
       {
         heading: "SPORTS & ACTIVEWEAR",
         links: ["Sports T-Shirts", "Track Pants", "Capris", "Sports Tops", "Sports Shorts", "Tights", "Sports Bras", "Shapewear"],
+      },
+            {
+        heading: "ACCESSORIES",
+        links: ["Belts", "Wallets", "Watches", "Caps", "Sunglasses", "Socks"],
       },
     ],
   },
@@ -78,10 +82,6 @@ const NAV_ITEMS: NavItem[] = [
       {
         heading: "WOMEN'S BAGS",
         links: ["Totes", "Shoulder Bags", "Crossbody", "Clutches", "Mini Bags", "Backpacks"],
-      },
-      {
-        heading: "MEN'S BAGS",
-        links: ["Messengers", "Briefcases", "Backpacks", "Duffles", "Laptop Bags"],
       },
       {
         heading: "FEATURED",
