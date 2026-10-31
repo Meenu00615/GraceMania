@@ -190,13 +190,13 @@ export default function Navbar() {
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.2 }}
               // 👇 CHANGED: Positioned relative to the nav item, width fits content, aligned left
-              className="absolute top-full left-0 bg-white shadow-xl hidden md:block border-t border-gray-100 w-max"
+              className="absolute top-full centre-0 bg-white shadow-xl hidden md:block border-t border-gray-100 w-max"
               onMouseEnter={() => setOpenDropdown(openDropdown)}
             >
               {/* 👇 CHANGED: Removed max-w-7xl and reduced padding */}
-              <div className="px-8 py-8">
+              <div className="px-5 py-5">
                 {/* 👇 CHANGED: Reduced gap, added min-width so columns don't squish */}
-                <div className="grid grid-cols-3 gap-8">
+                <div className="grid grid-cols-5 gap-5">
                   {NAV_ITEMS.find((i) => i.label === openDropdown)?.columns.map(
                     (col) => (
                       <div key={col.heading} className="min-w-[180px]">
