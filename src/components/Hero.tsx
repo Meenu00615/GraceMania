@@ -7,62 +7,42 @@ const meaCulpa = Mea_Culpa({
   weight: "400",
   subsets: ["latin"],
 });
-
-const images = [
-  "/images/pexels-alscre-1701164.jpg",
-  "/images/pexels-jason-1648968-3159734.jpg",
-  "/images/pexels-chipi1189-36059954.jpg",
-];
-
 export default function Hero() {
-  const [index, setIndex] = useState(0);
-
-  // Auto-slide every 4 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % images.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <div>
       <Navbar />
 
-      <section className="relative bg-black h-screen flex items-end justify-center text-center px-2 sm:px-10 overflow-hidden">
-        <AnimatePresence mode="sync">
-          <motion.div
-            key={index}
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${images[index]})` }}
-            initial={{ x: "100%", opacity: 0.6 }}
-            animate={{ x: 0, opacity: 1 }}
-            exit={{ x: "-100%", opacity: 0.6 }}
-            transition={{ duration: 0.9, ease: [0.65, 0, 0.35, 1] }}
-          />
-        </AnimatePresence>
+      <section className="bg-[url('/images/pexels-alscre-1701164.jpg')] bg-cover bg-center h-screen flex items-end justify-center text-center px-2 sm:px-10">
+        <div className="p-3 bg-opacity-90">
 
-        <div className="absolute inset-0 bg-black/20 pointer-events-none" />
-
-        <div className="relative p-3 bg-opacity-90 z-10">
-          <motion.h1
-            className={`text-[100px] sm:text-[180px] md:text-[240px] lg:text-[250px] font-bold mb-5 sm:mb-8 ${meaCulpa.className}`}
-            initial={{ opacity: 0, scale: 1.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, ease: [0.17, 0.67, 0.83, 0.67] }}
-            style={{
-              paddingLeft: "0.1em",
-              background: "linear-gradient(90deg, #000, #333)",
-              backgroundClip: "text",
-              WebkitBackgroundClip: "text",
-              color: "transparent",
-            }}
-          >
-            <span style={{ display: "inline-block", letterSpacing: "-0.001em" }}>
-              Grace Mania
-            </span>
-          </motion.h1>
-        </div>
+        <motion.h1
+  className={`text-[100px] sm:text-[180px] md:text-[240px] lg:text-[250px] font-bold mb-5 sm:mb-8 ${meaCulpa.className}`}
+  initial={{ 
+    opacity: 0,
+    scale: 1.5
+  }}
+  animate={{ 
+    opacity: 1,
+    scale: 1
+  }}
+  transition={{ 
+    duration: 1,
+    ease: [0.17, 0.67, 0.83, 0.67] 
+  }}
+  style={{
+    paddingLeft: "0.1em",
+    background: "linear-gradient(90deg, #000, #333)",
+    backgroundClip: "text",
+    WebkitBackgroundClip: "text",
+    color: "transparent"
+  }}
+>
+  <span style={{ 
+    display: "inline-block",
+    letterSpacing: "-0.001em" 
+  }}>
+    Grace Mania
+  </span>
 
         <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10">
           {images.map((_, i) => (
